@@ -1,5 +1,7 @@
 package fr.unilim.iut.spaceinvaders;
-  
+
+import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
+
 public class SpaceInvaders {
 
 	private static final char MARQUE_FIN_LIGNE = '\n';
@@ -12,13 +14,7 @@ public class SpaceInvaders {
 	 public SpaceInvaders(int longueur, int hauteur) {
 		this.longueur = longueur;
 		this.hauteur = hauteur;
-		
 	 }
-
-	@Override
-	public String toString() {
-		return recupererEspaceJeuDansChaineASCII();
-	}
 
 	public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();

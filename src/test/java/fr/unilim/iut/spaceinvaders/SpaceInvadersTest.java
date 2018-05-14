@@ -6,6 +6,8 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
+
 public class SpaceInvadersTest {
 
 	private SpaceInvaders spaceinvaders;
@@ -28,7 +30,7 @@ public class SpaceInvadersTest {
 	    "...............\n" + 
 	    "...............\n" + 
 	    "...............\n" + 
-	    "...............\n" , spaceinvaders.toString());
+	    "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
     }
    
 	@Test
@@ -45,10 +47,9 @@ public class SpaceInvadersTest {
 		"...............\n" + 
 		"...............\n" + 
 		"...............\n" + 
-		".......V.......\n" , spaceinvaders.toString());
+		".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	}
 	
-   
     @Test
 	public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {
 				
