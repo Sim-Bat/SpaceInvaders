@@ -6,6 +6,9 @@ import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.unilim.iut.spaceinvaders.model.Dimension;
+import fr.unilim.iut.spaceinvaders.model.Position;
+import fr.unilim.iut.spaceinvaders.model.SpaceInvaders;
 import fr.unilim.iut.spaceinvaders.utils.DebordementEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.MissileException;
@@ -279,4 +282,22 @@ public class SpaceInvadersTest {
         ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
     }
 
+    @Test
+    public void test_unNouveauEnvahisseurEstCorrectementPositionneDansEspaceJeu() {
+
+    	 spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 1);
+    	 spaceinvaders.positionnerUnNouvelEnvahisseur(new Dimension(1,1), new Position(7,0), 1);
+       
+		  assertEquals("" +
+		  ".......E.......\n" + 
+		  "...............\n" +
+		  "...............\n" + 
+		  "...............\n" +
+		  "...............\n" +
+		  "...............\n" + 
+		  "...............\n" +
+		  "...............\n" + 
+		  ".....VVVVVVV...\n" + 
+		  ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+    }
 }
