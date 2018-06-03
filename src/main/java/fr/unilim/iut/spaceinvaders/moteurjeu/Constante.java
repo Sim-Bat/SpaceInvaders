@@ -9,6 +9,10 @@ public class Constante {
     public static final int VAISSEAU_HAUTEUR = 40;
     public static final int VAISSEAU_VITESSE = 8;
     
+    public static final int MISSILE_LONGUEUR = 15;
+    public static final int MISSILE_HAUTEUR = 25;
+    public static final int MISSILE_VITESSE = 8; 
+    
 	public static final char MARQUE_FIN_LIGNE = '\n';
 	public static final char MARQUE_VIDE = '.';
 	public static final char MARQUE_VAISSEAU = 'V';
