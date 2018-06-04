@@ -371,7 +371,6 @@ public class SpaceInvadersTest {
 		  + "...............\n" 
 		  + "...............\n",spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	  }
-	  
 	  @Test
 	  public void test_Fin(){
 		  spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2), new Position(7,9), 1);
@@ -390,4 +389,5 @@ public class SpaceInvadersTest {
 		  		
 		  assertEquals(false, spaceinvaders.etreFini());
 	  }
+
 }

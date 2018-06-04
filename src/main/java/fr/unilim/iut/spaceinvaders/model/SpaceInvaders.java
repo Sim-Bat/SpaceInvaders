@@ -130,7 +130,7 @@ public class SpaceInvaders implements Jeu {
 	public boolean etreFini() {
 		return Collision.detecterCollision(this.missile, this.envahisseur);
 	}
-
+	
 	public Vaisseau recupererVaisseau() {
 		return this.vaisseau;
 	}

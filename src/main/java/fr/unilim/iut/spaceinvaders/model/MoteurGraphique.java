@@ -42,8 +42,6 @@ public class MoteurGraphique {
 	 * permet de lancer le jeu
 	 */
 	public void lancerJeu(int width, int height) throws InterruptedException {
-		JOptionPane win = new JOptionPane();
-		
 		// creation de l'interface graphique
 		this.gui = new InterfaceGraphique(this.dessin,width,height);
 		Controleur controle = this.gui.getControleur();
@@ -61,7 +59,8 @@ public class MoteurGraphique {
 		}
 		
 		if(this.jeu.etreFini()){
-			win.showMessageDialog(null, "You win !", "SpaceInvaders", JOptionPane.INFORMATION_MESSAGE);
+			System.out.println("You win !");
+			JOptionPane.showMessageDialog(null, "You win !", "SpaceInvaders", JOptionPane.INFORMATION_MESSAGE);
  		}
 	}
 
