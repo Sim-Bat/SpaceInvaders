@@ -1,5 +1,6 @@
 package fr.unilim.iut.spaceinvaders.model;
 
+import javax.swing.JOptionPane;
 
 /**
  * classe MoteurGraphique represente un moteur de jeu generique.
@@ -41,7 +42,8 @@ public class MoteurGraphique {
 	 * permet de lancer le jeu
 	 */
 	public void lancerJeu(int width, int height) throws InterruptedException {
-
+		JOptionPane win = new JOptionPane();
+		
 		// creation de l'interface graphique
 		this.gui = new InterfaceGraphique(this.dessin,width,height);
 		Controleur controle = this.gui.getControleur();
@@ -55,8 +57,12 @@ public class MoteurGraphique {
 			// affiche le jeu
 			this.gui.dessiner();
 			// met en attente
-			Thread.sleep(100);
+			Thread.sleep(20);
 		}
+		
+		if(this.jeu.etreFini()){
+			win.showMessageDialog(null, "You win !", "SpaceInvaders", JOptionPane.INFORMATION_MESSAGE);
+ 		}
 	}
 
 }

@@ -127,9 +127,8 @@ public class SpaceInvaders implements Jeu {
 		}
 	}
 
-	@Override
 	public boolean etreFini() {
-		return false;
+		return Collision.detecterCollision(this.missile, this.envahisseur);
 	}
 
 	public Vaisseau recupererVaisseau() {
@@ -239,5 +238,9 @@ public class SpaceInvaders implements Jeu {
 
 	private boolean envahisseurEstAGauche() {
 		return this.envahisseur.abscisseLaPlusAGauche() == 0;
+	}
+	
+	public boolean collisiondeuxSprite() {
+		return Collision.detecterCollision(this.missile, this.envahisseur);
 	}
 }
