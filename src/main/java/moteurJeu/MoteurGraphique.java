@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceinvaders.model;
+package moteurJeu;
 
 import javax.swing.JOptionPane;
 
