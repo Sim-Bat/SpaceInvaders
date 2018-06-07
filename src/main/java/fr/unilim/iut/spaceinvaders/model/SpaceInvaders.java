@@ -3,11 +3,11 @@ package fr.unilim.iut.spaceinvaders.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.unilim.iut.spaceinvaders.moteurJeu.Commande;
+import fr.unilim.iut.spaceinvaders.moteurJeu.Jeu;
 import fr.unilim.iut.spaceinvaders.utils.DebordementEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 import fr.unilim.iut.spaceinvaders.utils.MissileException;
-import moteurJeu.Commande;
-import moteurJeu.Jeu;
 
 public class SpaceInvaders implements Jeu {
 

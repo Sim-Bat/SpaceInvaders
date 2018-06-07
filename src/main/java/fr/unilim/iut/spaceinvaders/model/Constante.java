@@ -7,15 +7,15 @@ public class Constante {
 
     public static final int VAISSEAU_LONGUEUR = 120;
     public static final int VAISSEAU_HAUTEUR = 40;
-    public static final int VAISSEAU_VITESSE = 8;
+    public static final int VAISSEAU_VITESSE = 5;
     
     public static final int MISSILE_LONGUEUR = 15;
     public static final int MISSILE_HAUTEUR = 30;
-    public static final int MISSILE_VITESSE = 6; 
+    public static final int MISSILE_VITESSE = 4; 
     
     public static final int ENVAHISSEUR_LONGUEUR = 60;
     public static final int ENVAHISSEUR_HAUTEUR = 30;
-    public static final int ENVAHISSEUR_VITESSE = 6;
+    public static final int ENVAHISSEUR_VITESSE = 5;
     
 	public static final char MARQUE_FIN_LIGNE = '\n';
 	public static final char MARQUE_VIDE = '.';

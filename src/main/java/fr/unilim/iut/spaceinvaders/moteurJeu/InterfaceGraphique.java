@@ -1,4 +1,4 @@
-package moteurJeu;
+package fr.unilim.iut.spaceinvaders.moteurJeu;
 
 import javax.swing.JFrame;
 
