@@ -26,7 +26,7 @@ public class CollisionTest {
 		
 		spaceinvaders.tirerUnMissile(new Dimension(3,2),2);
 		
-		spaceinvaders.deplacerMissile();
+		spaceinvaders.deplacerMissiles();
 		
 		assertEquals("" + 
 			      ".......EEE.....\n" + 
@@ -41,7 +41,7 @@ public class CollisionTest {
 			      ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		
 		
-		spaceinvaders.deplacerMissile();
+		spaceinvaders.deplacerMissiles();
 		
 		assertEquals("" + 
 			      ".......EEE.....\n" + 
@@ -55,8 +55,8 @@ public class CollisionTest {
 			      ".....VVVVVVV...\n" + 
 			      ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		
-		spaceinvaders.deplacerMissile();
+		spaceinvaders.deplacerMissiles();
 		
-		assertEquals(true , Collision.detecterCollision(spaceinvaders.recupererMissile(), spaceinvaders.recupererEnvahisseur()));
+		assertEquals(true , Collision.detecterCollision(spaceinvaders.recupererUnSeulMissile(0), spaceinvaders.recupererEnvahisseur()));
 	}
 }

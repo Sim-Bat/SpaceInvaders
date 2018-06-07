@@ -1,8 +1,14 @@
-package fr.unilim.iut.spaceinvaders.model;
+package moteurJeu;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.util.List;
+
+import fr.unilim.iut.spaceinvaders.model.Envahisseur;
+import fr.unilim.iut.spaceinvaders.model.Missile;
+import fr.unilim.iut.spaceinvaders.model.SpaceInvaders;
+import fr.unilim.iut.spaceinvaders.model.Vaisseau;
 
 public class DessinSpaceInvaders implements DessinJeu {
 
@@ -19,8 +25,12 @@ public class DessinSpaceInvaders implements DessinJeu {
 			this.dessinerUnVaisseau(vaisseau, im);
 		}
 		if (this.jeu.aUnMissile()) {
-			Missile missile = this.jeu.recupererMissile();
-			this.dessinerUnMissile(missile, im);
+			List<Missile> missiles = this.jeu.recupererMissiles();
+			for (int i=0; i < missiles.size(); i++) {
+				if (missiles.get(i) != null) {
+					this.dessinerUnMissile(missiles.get(i), im);
+				}
+			}
 		}
 		if (this.jeu.aUnEnvahisseur()) {
 			Envahisseur envahisseur = this.jeu.recupererEnvahisseur();
